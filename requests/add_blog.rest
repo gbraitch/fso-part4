@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Finished refactoring",
+  "author": "Sevak",
+  "url": "www.sevak.com/cpscReview",
+  "likes": 62
+}
