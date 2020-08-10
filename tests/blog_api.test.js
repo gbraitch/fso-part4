@@ -203,6 +203,22 @@ test('Missing URL POST', async () => {
     .expect('Content-Type', /application\/json/)
 })
 
+test('Missing token', async () => {
+  const newBlog = {
+    title: 'testBlog',
+    author: 'Gurse16',
+    likes: 16
+  }
+
+  const result = await api
+    .post('/api/blogs')
+    .send(newBlog)
+    .expect(401)
+    .expect('Content-Type', /application\/json/)
+
+  expect(result.body.error).toContain('invalid token')
+})
+
 afterAll(() => {
   mongoose.connection.close()
 })
