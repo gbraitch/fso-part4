@@ -1,9 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjVmMzBiYzg3ZTA1NTk3MGI2NTAwYWFiYyIsImlhdCI6MTU5NzAzMTA1MH0.ddN3JySJrBgArjkAybjBb7cahGaVWDKAP2w3Rfv1xLU
 
 {
-  "title": "Finished refactoring",
-  "author": "Sevak",
-  "url": "www.sevak.com/cpscReview",
+  "title": "New test blog",
+  "author": "root",
+  "url": "www.sevak.com/newUser",
   "likes": 62
 }
